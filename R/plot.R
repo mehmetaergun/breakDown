@@ -37,7 +37,7 @@ plot.broken <- function(x, trans = I, ..., add_contributions = TRUE,
 
   pl <- pl +
     scale_y_continuous(expand = c(0.1,0.1), name="") +
-    scale_x_continuous(labels = broken_cumm$variable, breaks = broken_cumm$position+0.5, name="") +
+    scale_x_reverse(labels = broken_cumm$variable, breaks = broken_cumm$position+0.5, name="") +
     scale_fill_manual(values = vcolors) +
     coord_flip() +
     theme_light() + theme(legend.position = "none", panel.border = element_blank())
